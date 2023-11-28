@@ -1,20 +1,26 @@
 {
-  "name": "blog-example",
+  "name": "@example/minimal",
   "type": "module",
   "version": "0.0.1",
+  "private": true,
+  "browserslist": [
+    "defaults"
+  ],
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
-    "build": "astro check && astro build",
+    "build": "astro build",
     "preview": "astro preview",
     "astro": "astro"
   },
   "dependencies": {
-    "@astrojs/check": "^0.3.1",
-    "@astrojs/mdx": "^1.1.5",
+    "@astrojs/image": "^0.12.2-beta.0",
     "@astrojs/rss": "^3.0.0",
     "@astrojs/sitemap": "^3.0.3",
     "astro": "^3.6.1",
-    "typescript": "^5.3.2"
+    "astro-icon": "^0.8.1",
+    "postcss": "^8.4.31",
+    "postcss-preset-env": "^9.3.0",
+    "sharp": "^0.32.6"
   }
 }

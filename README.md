@@ -1,68 +1,58 @@
-# Astro Starter Kit: Blog
+# Moving to the 2.0 Content Collections API
 
-```sh
-npm create astro@latest -- --template blog
-```
+Video link: https://youtu.be/zUmqmuSvJMs
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/blog)
-[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/withastro/astro/tree/latest/examples/blog)
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/withastro/astro?devcontainer_path=.devcontainer/blog/devcontainer.json)
+In this video, I’ll take you through the process of updating our blog to the new Content Collections API for a type-safe markdown experience with error-checking that actually helps!
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+## General steps we’ll cover
+1. Update all packages to the latest versions (if you’re viewing this well into the future, you may want to update to the specific versions in the repo)
+`npx ncu -u`
+2. Update tsconfig.json and add .astro to .gitignore
+3. Create content/config.ts and define the blog collection
+4. Move all posts to /content/blog/
+5. Change “frontmatter” to “data” site-wide and change “url” to “slug” site-wide
+6. Switch out all .glob() imports to use the getCollection method from astro:content
+7. Ensure all links point to `/blog/[slug]/`
+8. Move old BlogPostLayout to /blog/ directory and update code inside of a getStaticPaths function
+9. Update RSS to use getCollection method
 
-![blog](https://github.com/withastro/astro/assets/2244813/ff10799f-a816-4703-b967-c78997e8323d)
+## Links
 
-Features:
+👨‍🚀 Astro Course Links 👨‍🚀
+- Github final: https://github.com/coding-in-public/astro-blog-tutorial/tree/content-collections-api
+- Demo site: https://codinginpublic.dev/projects/astro-blog-tutorial/
+- Full Astro Blog Course playlist: https://youtube.com/playlist?list=PLoqZcxvpWzzeRwF8TEpXHtO7KYY6cNJeF
 
-- ✅ Minimal styling (make it your own!)
-- ✅ 100/100 Lighthouse performance
-- ✅ SEO-friendly with canonical URLs and OpenGraph data
-- ✅ Sitemap support
-- ✅ RSS Feed support
-- ✅ Markdown & MDX support
+---------------------------------------
 
-## 🚀 Project Structure
+🔗  Key Links 🔗
+- Content Collections Docs: https://docs.astro.build/en/guides/content-collections/
+- Zod docs: https://zod.dev/
 
-Inside of your Astro project, you'll see the following folders and files:
+---------------------------------------
 
-```text
-├── public/
-├── src/
-│   ├── components/
-│   ├── content/
-│   ├── layouts/
-│   └── pages/
-├── astro.config.mjs
-├── README.md
-├── package.json
-└── tsconfig.json
-```
+🔗  Additional Links 🔗
+- My clipboard: Pastebot (https://tapbots.com/pastebot/)
+- My terminal: Warp (https://www.youtube.com/watch?v=wdrjIHzGW74)
+- Autocomplete in VSCode: fig.io
 
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
+---------------------------------------
 
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
+📹  Related Videos 📹
+- Playlist for Astro series: https://youtube.com/playlist?list=PLoqZcxvpWzzeRwF8TEpXHtO7KYY6cNJeF
 
-The `src/content/` directory contains "collections" of related Markdown and MDX documents. Use `getCollection()` to retrieve posts from `src/content/blog/`, and type-check your frontmatter using an optional schema. See [Astro's Content Collections docs](https://docs.astro.build/en/guides/content-collections/) to learn more.
 
-Any static assets, like images, can be placed in the `public/` directory.
+---------------------------------------
+🎨 VSCode Theming
+- Font: Cascadia Code: https://github.com/microsoft/cascadia-code
+- Theme: https://marketplace.visualstudio.com/items?itemName=Equinusocio.vsc-community-material-theme
+- Icons: https://marketplace.visualstudio.com/items?itemName=BeardedBear.beardedicons
 
-## 🧞 Commands
+---------------------------------------
 
-All commands are run from the root of the project, from a terminal:
-
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
-
-## 👀 Want to learn more?
-
-Check out [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
-
-## Credit
-
-This theme is based off of the lovely [Bear Blog](https://github.com/HermanMartinus/bearblog/).
+🌐 Connect With Me 🌐
+- Website: https://codinginpublic.dev
+- Blog: https://chrispennington.blog
+- Twitter: https://twitter.com/cpenned
+- Patreon: https://www.patreon.com/coding_in_public
+- Buy Me a Coffee: https://www.buymeacoffee.com/chrispennington
